@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>KnockoutJS Context Debugger - OCC</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">	
+		<style>
+			.center {
+				float: none;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.spacer {
+				margin-top: 40px; 
+			}
+		</style>
+	</head>
+
+	<body>
+
+	<div>
+	<div class="container">
+		<div class="row">
+			<div class="span7 center spacer">
+				<form>
+					<fieldset>
+						<legend>KnockoutJS Context Debugger - OCC</legend>
+
+						<span class="help-block">
+							If you experience crashes you propably have a non serializable viewmodel. You can turn off the serialization.
+							The extension default does ko.toJS(ko.dataFor($0)) and ko.toJS(ko.contextFor($0).$root)
+						</span>
+
+						<label class="checkbox">
+							<input type="checkbox" id="shouldDoKOtoJSCheckbox"> Serialize (provides the best visualization)
+						</label>
+					</fieldset>
+				</form>
+				
+				<div class="alert alert-success hide">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<h4>Saved</h4> 
+					<span id="infoMessage"></span>
+				</div>
+		</div>
+		</div>
+	</div>
+
+	<script src="js/lib/jquery-2.0.0.min.js"></script>
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/options.js" type="module"></script>
+</html>
